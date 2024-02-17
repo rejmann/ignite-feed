@@ -3,7 +3,7 @@ import Profiler from "./Container/Profiler";
 
 export default function Container() {
   return (
-    <div className="container pt-6 px-20 flex gap-6">
+    <div className="container pt-6 px-24 flex gap-6">
       <Profiler />
       <Comment />
     </div>
