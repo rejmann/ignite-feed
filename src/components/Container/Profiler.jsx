@@ -5,8 +5,8 @@ import Image from '../Image'
 
 export default function Profiler() {
   return (
-    <aside className="w-64 h-80 rounded-md bg-zinc-800">
-      <div className="h-20 w-full overflow-hidden">
+    <aside className="max-w-64 h-80 rounded-md bg-zinc-800">
+      <div className="h-20 overflow-hidden">
         <img
           className="rounded-md border-0"
           src={profilerBackgroundImg}
