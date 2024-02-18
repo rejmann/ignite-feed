@@ -1,10 +1,11 @@
 import { PencilLine } from '@phosphor-icons/react'
 import profilerBackgroundImg from './../../assets/img/profiler-background.jpg'
 import profilerImg from './../../assets/img/profiler.jpeg'
+import Image from '../Image'
 
 export default function Profiler() {
   return (
-    <aside className="w-72 h-80 rounded-md bg-zinc-800">
+    <aside className="w-64 h-80 rounded-md bg-zinc-800">
       <div className="h-20 w-full overflow-hidden">
         <img
           className="rounded-md border-0"
@@ -13,9 +14,8 @@ export default function Profiler() {
         />
       </div>
       <div className="flex flex-col justify-center items-center gap-2 mb-8">
-        <img
-          className="w-16 relative bottom-5 border-2 border-green-700 rounded-md"
-          src={profilerImg}
+        <Image
+          url={profilerImg}
           alt="Foto de Perfil"
         />
         <p className="text-xl">
