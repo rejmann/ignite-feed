@@ -7,7 +7,9 @@ export default function App() {
   return (
     <>
       <Header />
-      <Container />
+      <div className="w-full flex justify-center">
+        <Container />
+      </div>
     </>
   )
 }

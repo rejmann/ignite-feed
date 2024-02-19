@@ -17,9 +17,10 @@ export default function Profiler() {
         <Image
           url={profilerImg}
           alt="Foto de Perfil"
+          className="relative bottom-5"
         />
-        <p className="text-xl">
-          <strong>Rejman Nascimento</strong>
+        <p className="text-xl font-semibold">
+          Rejman Nascimento
         </p>
         <p className="text-sm text-zinc-500">Dev Fullstack</p>
       </div>
