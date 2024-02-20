@@ -1,6 +1,6 @@
 import Container from './components/Container'
-import Comment from './components/Container/Comment'
-import Profiler from './components/Container/Profiler'
+import Comment from './components/container/Comment'
+import Profiler from './components/container/Profiler'
 import Header from './components/Header'
 
 import profilerPhoto from './assets/img/profiler.jpeg'
