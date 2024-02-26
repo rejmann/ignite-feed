@@ -1,10 +1,10 @@
 import Container from './components/Container'
-import Comment from './components/container/Comment'
-import Profiler from './components/container/Profiler'
+import Post from './components/Post'
+import Profiler from './components/Profiler'
 import Header from './components/Header'
 
-import profilerPhoto from './assets/img/profiler.jpeg'
-import profilerBackgroundPhoto from './assets/img/profiler-background.jpg'
+import avatarUrl from './assets/img/profiler.jpeg'
+import backgroundUrl from './assets/img/profiler-background.jpg'
 
 import './global.css'
 
@@ -15,20 +15,20 @@ export default function App() {
       <Container>
         <Profiler
           name="Rejman Nascimento"
-          office="Dev Fullstack"
-          profilerPhoto={profilerPhoto}
-          profilerBackgroundPhoto={profilerBackgroundPhoto}
+          role="Dev Fullstack"
+          avatarUrl={avatarUrl}
+          backgroundUrl={backgroundUrl}
         />
         <div className="inline-block w-full">
-          <Comment
+          <Post
             name="Rejman Nascimento"
-            office="Dev Fullstack"
-            profilerPhoto={profilerPhoto}
+            role="Dev Fullstack"
+            avatarUrl={avatarUrl}
           />
-          <Comment
+          <Post
             name="Rejman Nascimento"
-            office="Dev Fullstack"
-            profilerPhoto={profilerPhoto}
+            role="Dev Fullstack"
+            avatarUrl={avatarUrl}
           />
       </div>
       </Container>

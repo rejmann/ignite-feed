@@ -4,15 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-zinc-900 text-white
+@layer components {
+    body {
+        @apply bg-i-gray-900 text-white
+    }
 }
 
 body, input, textarea, button {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-}
-
-.profiler-button {
-    @apply m-3 p-3 w-40 rounded-md border-2 border-green-700 text-green-700 hover:text-white hover:bg-green-700 flex justify-center items-stretch gap-2
 }
