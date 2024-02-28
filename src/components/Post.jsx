@@ -4,7 +4,7 @@ import Line from "./Line";
 
 export default function Post({ name, role, avatarUrl }) {
   return (
-    <div className="p-10 space-y-8 bg-i-gray-800 w-full mb-6 rounded-md">
+    <div className="bg-i-gray-800 p-4 md:p-10 space-y-6 md:space-y-8 md:mb-6 md:rounded-md border-t-4 md:border-0 border-i-gray-900">
       <header className="flex justify-between items-center">
         <div className="flex justify-start items-center gap-3">
           <Avatar
@@ -13,10 +13,10 @@ export default function Post({ name, role, avatarUrl }) {
             hasBorder
           />
           <div>
-            <p className="text-md font-semibold">
+            <p className="text-sm md:text-md font-semibold">
               {name}
             </p>
-            <p className="text-sm text-i-gray-400">
+            <p className="hidden md:block text-sm text-i-gray-400">
               {role}
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function Post({ name, role, avatarUrl }) {
       <footer className="space-y-6">
         <h4 className="font-bold mt-4">Deixei seu feedback</h4>
         <textarea
-          className="h-28 rounded-md outline-none border-2 border-i-green bg-i-gray-900 w-full resize-none p-3 text-sm"
+          className="md:h-28 rounded-md outline-none focus:border-2 focus:border-i-green bg-i-gray-900 w-full resize-none p-3 text-sm"
           name="feedback"
           id="feedback"
           placeholder="Escreva um comentário..."

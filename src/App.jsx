@@ -1,4 +1,3 @@
-import Container from './components/Container'
 import Post from './components/Post'
 import Profiler from './components/Profiler'
 import Header from './components/Header'
@@ -8,30 +7,45 @@ import backgroundUrl from './assets/img/profiler-background.jpg'
 
 import './global.css'
 
+const posts = [
+  {
+    name: 'Rejman Nascimento',
+    role: 'Dev Fullstack',
+    avatarUrl: avatarUrl
+  },
+  {
+    name: 'Rejman Nascimento',
+    role: 'Dev Fullstack',
+    avatarUrl: avatarUrl
+  },
+]
+
 export default function App() {
   return (
     <>
       <Header />
-      <Container>
+      <div className="w-full sm:inline-block md:flex sm:gap-1 sm:mt-2 md:gap-6 sm:px-4 md:pt-6 xl:px-56 lg:px-8">
         <Profiler
           name="Rejman Nascimento"
           role="Dev Fullstack"
           avatarUrl={avatarUrl}
           backgroundUrl={backgroundUrl}
         />
-        <div className="inline-block w-full">
-          <Post
-            name="Rejman Nascimento"
-            role="Dev Fullstack"
-            avatarUrl={avatarUrl}
-          />
-          <Post
-            name="Rejman Nascimento"
-            role="Dev Fullstack"
-            avatarUrl={avatarUrl}
-          />
+        {!! posts.length && (
+          <div className="inline-block w-full">
+          {posts.map(post => {
+            return (
+              <Post
+                key={post.avatarUrl}
+                name={post.name}
+                role={post.role}
+                avatarUrl={post.avatarUrl}
+              />
+            )
+          })}
+          </div>
+        )}
       </div>
-      </Container>
     </>
   )
 }

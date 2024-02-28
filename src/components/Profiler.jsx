@@ -9,10 +9,10 @@ export default function Profiler({
   backgroundUrl
 }) {
   return (
-    <aside className="max-w-60 h-72 rounded-md bg-i-gray-800 space-y-2">
+    <aside className="w-full sm:mx-2 md:max-w-60 h-72 md:rounded-md bg-i-gray-800 space-y-2">
       <div className="h-20 overflow-hidden">
         <img
-          className="rounded-md border-0"
+          className="md:rounded-md border-0"
           src={backgroundUrl}
           alt="Plano de Fundo"
         />
