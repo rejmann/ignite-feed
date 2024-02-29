@@ -2,8 +2,15 @@ import Avatar from "./Avatar";
 
 import avatarUrl from './../assets/img/profiler.jpeg'
 import { ThumbsUp, Trash } from "@phosphor-icons/react";
+import { useState } from 'react';
 
 export default function Comment({ name, role, content }) {
+  const [like, setLike] = useState(0);
+
+  function handleLike() {
+    setLike(state => state + 1)
+  }
+
   return (
     <div className="flex gap-4">
       <div className="w-12 h-12 hidden md:block">
@@ -31,11 +38,15 @@ export default function Comment({ name, role, content }) {
             {content}
           </p>
         </div>
-        <button type="button" className="flex items-center gap-2 text-xs md:text-sm text-i-gray-300">
+        <button
+          type="button" 
+          className="flex items-center gap-2 text-xs md:text-sm text-i-gray-300"
+          onClick={handleLike}
+        >
           <ThumbsUp size={22} />
           <span>Curtir</span>
           <div className="w-1 h-1 rounded-full border-2"></div>
-          <span>3</span>
+          <span>{like}</span>
         </button>
       </div>
     </div>
