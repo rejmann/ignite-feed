@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 import avatarUrl from './../assets/img/profiler.jpeg'
 import { ThumbsUp, Trash } from "@phosphor-icons/react";
 
-export default function Comment({ name, role }) {
+export default function Comment({ name, role, content }) {
   return (
     <div className="flex gap-4">
       <div className="w-12 h-12 hidden md:block">
@@ -28,7 +28,7 @@ export default function Comment({ name, role }) {
             </span>
           </div>
           <p className="text-sm">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            {content}
           </p>
         </div>
         <button type="button" className="flex items-center gap-2 text-xs md:text-sm text-i-gray-300">

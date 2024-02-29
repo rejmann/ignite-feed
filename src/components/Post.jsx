@@ -2,6 +2,14 @@ import Avatar from "./Avatar";
 import Comment from "./Comment";
 import Line from "./Line";
 
+const comments = [
+  {
+    name: 'Rejman Nascimento',
+    role: 'Dev Fullstack',
+    content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+  }
+];
+
 export default function Post({ name, role, avatarUrl }) {
   return (
     <div className="bg-i-gray-800 p-4 md:p-10 space-y-6 md:space-y-8 md:mb-6 md:rounded-md border-t-4 md:border-0 border-i-gray-900">
@@ -46,10 +54,18 @@ export default function Post({ name, role, avatarUrl }) {
           Publicar
         </button>
       </footer>
-      <Comment
-          name="Rejman Nascimento"
-          role="Dev Fullstack"
-      />
+      {!! comments.length && (
+        comments.map(comment => {
+          return (
+            <Comment
+              key={comment.content}
+              name={comment.name}
+              role={comment.role}
+              content={comment.content}
+            />
+          )
+        })
+      )}
     </div>
   )
 }
